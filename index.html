@@ -1329,13 +1329,13 @@
             }
 
             if (!stageTarget.lists) stageTarget.lists = {};
-            let listId = Object.keys(stageTarget.lists).find(k => stageTarget.lists[k][0] === '#スペクトラムデータ');
+            let listId = Object.keys(stageTarget.lists).find(k => stageTarget.lists[k][0] === '#频谱数据');
             if (!listId) {
                 listId = crypto.randomUUID ? crypto.randomUUID() : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
                     const r = Math.random() * 16 | 0;
                     return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
                 });
-                stageTarget.lists[listId] = ['#スペクトラムデータ', []];
+                stageTarget.lists[listId] = ['#频谱数据', []];
             }
 
             const header = `?,${settings.numBars},${settings.barThickness},${settings.barHeightScale},${settings.fps},${settings.barColor}`;
